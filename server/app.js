@@ -21,7 +21,7 @@ app.use(express.json());
 // app.use(basicAuth({
 //   authorizer : dbAuthorizer, //custom authorizer fn
 //   authorizeAsync: true, //allow our authorizer to be async
-//   unauthorizedResponse : () => 'None shall pass!'
+//   unauthorizedResponse : () => 'You are not Authorized!'
 // }))
 
 // //compares username + password with what's in the database

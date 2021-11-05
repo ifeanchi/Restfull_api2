@@ -7,7 +7,6 @@ const register = async(req, res) =>  {
     return res.status(400).send("Password is required and should be 6 characters long")
     let userExist = await User.findOne({where:{email: req.body.email}})
     if(userExist) return res.status(400).send("Email is taken")
-    if(!userExist) return res.status(400).send("Email is required")
 
     let newUser = await User.create(req.body);
     res.json({newUser})
